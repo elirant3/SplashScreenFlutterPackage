@@ -11,6 +11,7 @@ class SplashScreen extends StatefulWidget {
 
   /// App title, shown in the middle of screen in case of no image available
   final Text title;
+  final RichText? rTitle;
 
   /// Page background color
   final Color backgroundColor;
@@ -76,6 +77,7 @@ class SplashScreen extends StatefulWidget {
     this.onClick,
     this.navigateAfterSeconds,
     required this.title,
+    required this.rTitle,
     required this.backgroundColor,
     required this.styleTextUnderTheLoader,
     this.image,
@@ -125,6 +127,7 @@ class SplashScreen extends StatefulWidget {
     GestureTapCallback? onClick,
     Object? navigateAfterSeconds,
     Text title = const Text(''),
+    RichText? rTitle,
     TextStyle styleTextUnderTheLoader = _defaultStyleTextUnderTheLoader,
     ImageProvider? imageBackground,
     Gradient? gradientBackground,
@@ -143,6 +146,7 @@ class SplashScreen extends StatefulWidget {
         onClick: onClick,
         navigateAfterSeconds: navigateAfterSeconds,
         title: title,
+        rTitle: rTitle,
         styleTextUnderTheLoader: styleTextUnderTheLoader,
         imageBackground: imageBackground,
         gradientBackground: gradientBackground,
@@ -162,6 +166,7 @@ class SplashScreen extends StatefulWidget {
     GestureTapCallback? onClick,
     dynamic navigateAfterSeconds,
     Text title = const Text(''),
+    RichText? rTitle,
     TextStyle styleTextUnderTheLoader = _defaultStyleTextUnderTheLoader,
     ImageProvider? imageBackground,
     Gradient? gradientBackground,
@@ -180,6 +185,7 @@ class SplashScreen extends StatefulWidget {
         onClick: onClick,
         navigateAfterSeconds: navigateAfterSeconds,
         title: title,
+        rTitle: rTitle,
         styleTextUnderTheLoader: styleTextUnderTheLoader,
         imageBackground: imageBackground,
         gradientBackground: gradientBackground,
@@ -277,7 +283,9 @@ class _SplashScreenState extends State<SplashScreen> {
                         Padding(
                           padding: const EdgeInsets.only(top: 10.0),
                         ),
-                        widget.title
+                        Container(
+                          child: widget.rTitle,
+                        )
                       ],
                     ),
                   ),
