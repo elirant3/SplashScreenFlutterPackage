@@ -284,7 +284,7 @@ class _SplashScreenState extends State<SplashScreen> {
                           padding: const EdgeInsets.only(top: 10.0),
                         ),
                         Container(
-                          child: widget.rTitle,
+                          child: widget.rTitle != null ? widget.rTitle : widget.title,
                         )
                       ],
                     ),
