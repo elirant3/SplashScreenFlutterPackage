@@ -1,4 +1,4 @@
-# [Splash Screen](https://pub.dev/packages/splashscreen)
+# [Splash Screen](https://pub.dev/packages/splashscreen) - support RichText as title. (rTitle)
 
 * A splashscreen package to be used for an intro for any flutter application easily with a lot of customization
 
